@@ -10,7 +10,7 @@ const Navbar = () => {
           className="navbar navbar-expand-lg bg-body-transparent"
           style={{ height: "10vh" }}>
           <div className="container">
-            <a className="navbar-brand mt-3" href="#">
+            <a className="navbar-brand mt-3" href="/">
               <Image
                 className="img-fluid"
                 src={elc_logo}
@@ -49,14 +49,21 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-item mx-4">
+                  <a className="nav-link" href="/faqs">
+                    FAQs
+                  </a>
+                </li>
+                <li className="nav-item mx-4">
                   <a className="nav-link" href="#">
                     Contact Us
                   </a>
                 </li>
               </ul>
-              <button className="nav-link link mx-3 my-3 p-3 fw-bold text-white rounded text-decoration-none">
-                Get Started
-              </button>
+              <a className="nav-link" href="/faqs">
+                <button className="nav-link link mx-3 my-3 p-3 fw-bold text-white rounded text-decoration-none">
+                  Get Started
+                </button>
+              </a>
             </div>
           </div>
         </nav>

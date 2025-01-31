@@ -58,6 +58,9 @@ body {
 .nav-link {
   font-size: 18px;
 }
+.fag-title {
+  color: rgba(5, 5, 130, 1);
+}
 @media (max-width: 900px) {
   .navContainer {
     background-color: whitesmoke;
