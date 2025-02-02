@@ -1,0 +1,68 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+:root {
+  --backgroundd: #ffffff;
+  --foregroundd: #171717;
+}
+/* ::before, ::after { margin: 0px; padding: 0px; box-sizing: border-box; } */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.container,
+.container-fluid {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+body {
+  color: var(--foregroundd);
+  background-color: white;
+}
+
+.mainContainer {
+  background: url("./Images/Website_Design/gsgp_2024_093\ ProjectELC1024\ Hero\ Bg.png")
+    no-repeat center center;
+  background-size: cover;
+}
+/* First code */
+.section-one {
+  background: url("./Images/Website_Design/hero_img.png") no-repeat center
+    center;
+  background-size: cover;
+}
+.intro-top {
+  font-size: 60px;
+  line-height: 68px;
+}
+.intro-p {
+  font-size: 20px;
+  line-height: 26.04px;
+}
+.text-intro {
+  font-size: 20px;
+  line-height: 26.04px;
+  letter-spacing: 10px;
+}
+.anchor a,
+.link {
+  background-color: rgba(5, 5, 130, 1);
+}
+.nav-link {
+  font-size: 18px;
+}
+.fag-title {
+  color: rgba(5, 5, 130, 1);
+}
+@media (max-width: 900px) {
+  .navContainer {
+    background-color: whitesmoke;
+  }
+}
