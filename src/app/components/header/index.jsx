@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import elc_logo from "../../Images/Website_Design/elc_logo.png";
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
           className="navbar navbar-expand-lg bg-body-transparent"
           style={{ height: "10vh" }}>
           <div className="container">
-            <a className="navbar-brand mt-3" href="/">
+            <Link className="navbar-brand mt-3" href="/">
               <Image
                 className="img-fluid"
                 src={elc_logo}
@@ -18,7 +19,16 @@ const Navbar = () => {
                 height={87}
                 alt="logo"
               />
-            </a>
+            </Link>
+            {/* <a className="navbar-brand mt-3" href="/">
+              <Image
+                className="img-fluid"
+                src={elc_logo}
+                width={157}
+                height={87}
+                alt="logo"
+              />
+            </a> */}
             <button
               className="navbar-toggler"
               type="button"
