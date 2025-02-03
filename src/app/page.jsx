@@ -1,3 +1,4 @@
+"use client";
 import Header from "@/app/components/header/index";
 // import Navbar from "./components/Navbar";
 // import hero_img from "./Images/Website_Design/hero_img.png";
@@ -86,7 +87,7 @@ export default function Home() {
         <div
           className="partners"
           style={{
-            height: "180px",
+            height: "10px",
             backgroundColor: "rgba(5, 5, 130, 1)",
           }}></div>
       </div>

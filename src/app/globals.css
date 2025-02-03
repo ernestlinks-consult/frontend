@@ -61,6 +61,11 @@ body {
 .fag-title {
   color: rgba(5, 5, 130, 1);
 }
+
+.active {
+  color: var(--bs-nav-link-hover-color);
+}
+
 @media (max-width: 900px) {
   .navContainer {
     background-color: whitesmoke;
