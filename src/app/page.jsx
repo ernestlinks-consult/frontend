@@ -1,7 +1,6 @@
 "use client";
 import Header from "@/app/components/header/index";
-// import Navbar from "./components/Navbar";
-// import hero_img from "./Images/Website_Design/hero_img.png";
+import hero_img from "./Images/Website_Design/hero_img.png";
 export default function Home() {
   return (
     <>
@@ -14,8 +13,9 @@ export default function Home() {
           id="section-one"
           style={{ height: "90vh" }}>
           {/* Consider this */}
-          {/* <div className="container">
-            <div className="row">
+          <div className="container">
+            <div className="row d-flex align-items-center flex-md-row flex-column-reverse imageandtext">
+              {/* TEXT */}
               <div className="col-md-6">
                 <h4 className="text-intro pt-3 my-3">
                   WE ARE YOUR TRUSTED PARTNER
@@ -38,20 +38,20 @@ export default function Home() {
                 <div className="anchor my-5">
                   <a
                     className="p-3 mt-4 text-white rounded text-decoration-none"
-                    href="#"
-                  >
+                    href="#">
                     Explore Now
                   </a>
                 </div>
               </div>
-              <div className="col-md-6">
-                <img src={{ hero_img }} alt="" />
+              {/* IMAGE */}
+              <div className="col-md-6 text-center">
+                {/* <img src={{ hero_img }} alt="" /> */}
               </div>
             </div>
-          </div> */}
+          </div>
 
           {/* Main code */}
-          <div className="container">
+          {/* <div className="container">
             <div className="row">
               <div className="col-md-6">
                 <h4 className="text-intro pt-3 my-3">
@@ -83,6 +83,7 @@ export default function Home() {
               <div className="col-md-6 second"></div>
             </div>
           </div>
+        </div> */}
         </div>
         <div
           className="partners"
