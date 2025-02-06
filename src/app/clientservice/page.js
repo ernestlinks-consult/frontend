@@ -75,6 +75,21 @@ const CustomerInfoForm = () => {
     },
   ];
 
+  const gender = [
+    {
+      value: "None",
+      label: "Select Gender",
+    },
+    {
+      value: "Male",
+      label: "Male",
+    },
+    {
+      value: "Female",
+      label: "Female",
+    },
+  ];
+
   const [dualCitizenship, setDualCitizenship] = useState(false);
 
   const handleChange = (e) => {
@@ -164,12 +179,25 @@ const CustomerInfoForm = () => {
         </div>
       </div> */}
         <div className="container py-5 d-flex justify-content-center min-vh-100">
-          <div className="p-4 w-75">
+          <div className="p-4 w-96">
             <h2 className="text-center mb-4">New Applicant Information</h2>
             <form onSubmit={handleSubmit}>
-              <h4 className="mt-4">Personal Information</h4>
-              <div className="row">
-                <div className="col-md-6 mb-3">
+              <h4 className="mt-4 mb-4">Personal Information</h4>
+              <div className="border p-3">
+                {" "}
+                <div className="row">
+                  <Box
+                    component="form"
+                    // sx={{ "& > :not(style)": { m: 1, width: "25ch" } }}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      gap: 1,
+                    }}
+                    noValidate
+                    autoComplete="off">
+                    {/* <div className="col-md-6 mb-3">
                   <label className="form-label">Title</label>
                   <input
                     type="text"
@@ -179,67 +207,176 @@ const CustomerInfoForm = () => {
                     onChange={handleChange}
                     required
                   />
+                </div> */}
+                    <TextField
+                      id="outlined-basic"
+                      label="Title"
+                      variant="outlined"
+                      className="col-md-4 mb-4"
+                      name="title"
+                      value={formData.title}
+                      onChange={handleChange}
+                      required
+                    />
+                    <TextField
+                      id="outlined-basic"
+                      label="Surname"
+                      variant="outlined"
+                      className="col-md-4 mb-4"
+                      name="surname"
+                      value={formData.surname}
+                      onChange={handleChange}
+                      required
+                    />
+                    <TextField
+                      id="outlined-basic"
+                      label="First Name"
+                      variant="outlined"
+                      className="col-md-4 mb-4"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Box>
                 </div>
-                <div className="col-md-6 mb-3">
-                  <label className="form-label">Surname</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="surname"
-                    value={formData.surname}
+                <div className="row">
+                  <Box
+                    component="form"
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      gap: 1,
+                    }}
+                    noValidate
+                    autoComplete="off">
+                    <TextField
+                      id="outlined-basic"
+                      label="Other Name"
+                      variant="outlined"
+                      className="col-md-4 mb-4"
+                      name="otherName"
+                      value={formData.otherName}
+                      onChange={handleChange}
+                      required
+                    />
+                    <TextField
+                      id="outlined-basic"
+                      label="Maiden Name"
+                      variant="outlined"
+                      className="col-md-4 mb-4"
+                      name="maidenName"
+                      value={formData.maidenName}
+                      onChange={handleChange}
+                      required
+                    />
+                    <TextField
+                      id="outlined-basic"
+                      label="Previous Name"
+                      variant="outlined"
+                      className="col-md-4 mb-3"
+                      name="previousName"
+                      value={formData.previousName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Box>
+                </div>
+                {/* ----------------------------------- */}
+                <div className="row">
+                  <Box
+                    component="form"
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      gap: 1,
+                    }}
+                    noValidate
+                    autoComplete="off">
+                    {/* <TextField
+                    id="outlined-basic"
+                    label="Gender"
+                    variant="outlined"
+                    className="col-md-4 mb-4"
+                    name="gender"
+                    value={formData.gender}
                     onChange={handleChange}
                     required
-                  />
+                  /> */}
+                    <TextField
+                      id="outlined-basic"
+                      select
+                      label="Gender"
+                      defaultValue="None"
+                      className="col-md-4 mb-4">
+                      {gender.map((option) => (
+                        <MenuItem key={option.value} value={option.value}>
+                          {option.label}
+                        </MenuItem>
+                      ))}
+                    </TextField>
+                    {/* <TextField
+                    id="outlined-basic"
+                    label="City of Birth"
+                    variant="outlined"
+                    className="col-md-4 mb-4"
+                    name="cityOfBirth"
+                    value={formData.cityOfBirth}
+                    onChange={handleChange}
+                    required
+                  /> */}
+                    <TextField
+                      id="outlined-basic"
+                      label="Date of Birth"
+                      type="date"
+                      InputLabelProps={{ shrink: true }}
+                      variant="outlined"
+                      className="col-md-4 mb-4"
+                      name="dob"
+                      value={formData.dob}
+                      onChange={handleChange}
+                      required
+                    />
+                    <TextField
+                      id="outlined-basic"
+                      label="Country of Birth"
+                      variant="outlined"
+                      className="col-md-4 mb-4"
+                      name="countryOfBirth"
+                      value={formData.countryOfBirth}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Box>
+                </div>
+                <div className="row">
+                  <Box
+                    component="form"
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      gap: 1,
+                    }}
+                    noValidate
+                    autoComplete="off">
+                    <TextField
+                      id="outlined-basic"
+                      label="City of Birth"
+                      variant="outlined"
+                      className="col-md-4 mb-4"
+                      name="cityOfBirth"
+                      value={formData.cityOfBirth}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Box>
                 </div>
               </div>
 
-              <div className="row">
-                <div className="col-md-6 mb-3">
-                  <label className="form-label">First Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="col-md-6 mb-3">
-                  <label className="form-label">Other Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="otherName"
-                    value={formData.otherName}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-md-6 mb-3">
-                  <label className="form-label">Maiden Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="firstName"
-                    value={formData.maidenName}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="col-md-6 mb-3">
-                  <label className="form-label">Previous Names</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="otherName"
-                    value={formData.previousName}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
+              <div className="border p-3 mt-4"></div>
 
               <div className="p-4">
                 <h2 className="text-xl font-bold mb-4">Information Form</h2>
@@ -261,89 +398,6 @@ const CustomerInfoForm = () => {
                         </MenuItem>
                       ))}
                     </TextField>
-                    {/* <TextField
-                      id="outlined-select-nationality-native"
-                      select
-                      label="Native Select"
-                      defaultValue="GH"
-                      slotProps={{
-                        select: {
-                          native: true,
-                        },
-                      }}
-                      helperText="Please select your nationality">
-                      {nationalities.map((option) => (
-                        <option key={option.value} value={option.value}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </TextField>
-                  </div>
-                  <div>
-                    <TextField
-                      id="filled-select-nationality"
-                      select
-                      label="Select Nationality"
-                      defaultValue="GH"
-                      helperText="Please select your nationality"
-                      variant="filled">
-                      {nationalities.map((option) => (
-                        <MenuItem key={option.value} value={option.value}>
-                          {option.label}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                    <TextField
-                      id="filled-select-nationality-native"
-                      select
-                      label="Native Select"
-                      defaultValue="GH"
-                      slotProps={{
-                        select: {
-                          native: true,
-                        },
-                      }}
-                      helperText="Please select your nationality"
-                      variant="filled">
-                      {nationalities.map((option) => (
-                        <option key={option.value} value={option.value}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </TextField>
-                  </div>
-                  <div>
-                    <TextField
-                      id="standard-select-nationality"
-                      select
-                      label="Select Nationality"
-                      defaultValue="GH"
-                      helperText="Please select your nationality"
-                      variant="standard">
-                      {nationalities.map((option) => (
-                        <MenuItem key={option.value} value={option.value}>
-                          {option.label}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                    <TextField
-                      id="standard-select-nationality-native"
-                      select
-                      label="Native Select"
-                      defaultValue="GH"
-                      slotProps={{
-                        select: {
-                          native: true,
-                        },
-                      }}
-                      helperText="Please select your nationality"
-                      variant="standard">
-                      {nationalities.map((option) => (
-                        <option key={option.value} value={option.value}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </TextField> */}
                   </div>
                 </Box>
 
@@ -405,26 +459,6 @@ const CustomerInfoForm = () => {
                     <InputLabel htmlFor="filled-adornment-password">
                       Password
                     </InputLabel>
-                    <FilledInput
-                      id="filled-adornment-password"
-                      type={showPassword ? "text" : "password"}
-                      endAdornment={
-                        <InputAdornment position="end">
-                          <IconButton
-                            aria-label={
-                              showPassword
-                                ? "hide the password"
-                                : "display the password"
-                            }
-                            onClick={handleClickShowPassword}
-                            onMouseDown={handleMouseDownPassword}
-                            onMouseUp={handleMouseUpPassword}
-                            edge="end">
-                            {showPassword ? <VisibilityOff /> : <Visibility />}
-                          </IconButton>
-                        </InputAdornment>
-                      }
-                    />
                   </FormControl>
                   <FormControl fullWidth sx={{ m: 1 }} variant="filled">
                     <InputLabel htmlFor="filled-adornment-amount">
