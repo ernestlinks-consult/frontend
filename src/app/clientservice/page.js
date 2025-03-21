@@ -376,7 +376,9 @@ const CustomerInfoForm = () => {
                 </div>
               </div>
 
-              <div className="border p-3 mt-4"></div>
+              <div className="border p-3 mt-4">
+                
+              </div>
 
               <div className="p-4">
                 <h2 className="text-xl font-bold mb-4">Information Form</h2>

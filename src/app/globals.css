@@ -78,9 +78,31 @@ body {
 .active {
   color: var(--bs-nav-link-hover-color);
 }
+.hero_container {
+  max-height: 840px;
 
+  overflow: hidden;
+}
+.hero_img {
+  margin-top: 350px;
+  height: 810px;
+  object-fit: contain;
+}
 @media (max-width: 900px) {
   .navContainer {
     background-color: whitesmoke;
+  }
+}
+
+@media (max-width: 868px) {
+  .landing {
+    margin-top: 24vh;
+  }
+  .hero_container {
+    max-height: 625px;
+  }
+  .hero_img {
+    margin-top: 10px;
+    max-height: 625px;
   }
 }
