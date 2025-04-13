@@ -3,6 +3,7 @@ import Header from "@/app/components/header/index";
 import "./globals.css";
 import Image from "next/image";
 import hero_img from "@/app/Images/Website_Design/hero-img-v2.png";
+
 export default function Home() {
   return (
     <>
@@ -11,7 +12,8 @@ export default function Home() {
         <div className="container-fluid landing " style={{ height: "92vh" }}>
           <div
             className=" relative d-flex align-items-center justify-content-center"
-            style={{ height: "92vh" }}>
+            style={{ height: "92vh" }}
+          >
             {/* Consider this */}
             <div className="container">
               <div className="row d-flex align-items-center flex-md-row flex-column imageandtext">
@@ -38,7 +40,8 @@ export default function Home() {
                   <div className="anchor my-5">
                     <a
                       className="p-3 mt-4 text-white rounded text-decoration-none"
-                      href="#">
+                      href="#"
+                    >
                       Explore Now
                     </a>
                   </div>
@@ -86,7 +89,6 @@ export default function Home() {
         </div> */}
           </div>
         </div>
-       
       </div>
       {/* <div className=" main-page "></div> */}
 
