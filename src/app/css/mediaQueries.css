@@ -1,0 +1,10 @@
+@media (max-width: 1200px) {
+  .sideimage {
+    height: 0;
+    width: 0;
+    display: none;
+  }
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}

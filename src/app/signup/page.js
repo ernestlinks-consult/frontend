@@ -1,15 +1,18 @@
-import CreateArtifact from "../signup/Create_artifact";
-import "../index.css";
+import "@/app/css/index.css";
+import "@/app/css/mediaQueries.css";
+import Link from "next/link";
+import Create_artifact from "../components/Create_artifact";
 
 export default function Create_account() {
   return (
-    <>
+    <div className="main-container">
       <div className="create-account">
         <div className="head">
           <h1>Create Account</h1>
           <p>
-            Enter your email below. We'll send you a code to complete your
-            sign-up.
+            {
+              "Enter your email below. We'll send you a code to complete your sign-up."
+            }
           </p>
         </div>
 
@@ -25,7 +28,7 @@ export default function Create_account() {
 
         <div className="text">
           <p>
-            Already have an account? <a href="/">Click here!</a>
+            Already have an account? <Link href="/">Click here!</Link>
           </p>
         </div>
         {/* sign up button */}
@@ -33,7 +36,7 @@ export default function Create_account() {
           <button type="submit">Signup</button>
         </div>
       </div>
-      <CreateArtifact />
-    </>
+      <Create_artifact />
+    </div>
   );
 }
