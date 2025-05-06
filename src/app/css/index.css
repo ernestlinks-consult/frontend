@@ -23,6 +23,8 @@ body {
 .sideimage {
   height: 100%;
   width: 100%;
+  background-image: url("/images/create_artifact1.png");
+  background-size: cover;
 }
 .main-container {
   display: grid;
@@ -72,7 +74,9 @@ a:link {
     border-radius: 4px;
     color: var(--white);
     background-color: var(--primary-main-700);
+    outline: nonec;
   }
+  margin-bottom: 52px;
 }
 /* ------- CREATE ACCOUNTELEMENTS------------ */
 .create-account {
@@ -80,6 +84,7 @@ a:link {
   align-self: center;
   flex-direction: column;
   padding: 4px 82px;
+  width: 100%;
   /* justify-items: space-between; */
   .head {
     h1 {
@@ -93,7 +98,7 @@ a:link {
   }
 
   .inputs {
-    margin-bottom: 32px;
+    margin-bottom: 52px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -103,7 +108,7 @@ a:link {
     color: var(--neutral);
     outline: none;
     font-size: 18px;
-    border: 1.5px solid var(--neutral);
+    border: 1.5px solid var(--neutral-800);
     border-radius: 8px;
     padding: 8px;
   }
@@ -131,6 +136,7 @@ a:link {
 
   h1 {
     text-align: center;
+    color: var(--primary-main-900);
   }
 
   .bubble-img {

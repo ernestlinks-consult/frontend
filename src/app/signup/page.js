@@ -26,14 +26,14 @@ export default function Create_account() {
           <input type="password" placeholder="Confirm Password" hidden />
         </div>
 
+        {/* sign up button */}
+        <div className="signup-button">
+          <button type="submit">Signup</button>
+        </div>
         <div className="text">
           <p>
             Already have an account? <Link href="/">Click here!</Link>
           </p>
-        </div>
-        {/* sign up button */}
-        <div className="signup-button">
-          <button type="submit">Signup</button>
         </div>
       </div>
       <Create_artifact />

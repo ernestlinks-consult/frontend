@@ -21,7 +21,9 @@ export default function DesktopOtp() {
           </div>
           <div className="text">
             <p>We just sent you a passcode.</p>
-            <p>Please enter the passcode we sent to e*********2@gmail.com</p>
+            <p>
+              Please enter the passcode we sent to {"e*********2@gmail.com"}
+            </p>
           </div>
           <div className="otp-numbers">
             <input className="otpNum" maxLength={1}></input>
@@ -32,7 +34,7 @@ export default function DesktopOtp() {
           <div className="buttons">
             <button className="one">Verify with Phone</button>
             <div className="text resend">
-              <p>Resend passcode</p>
+              <button className="two">Resend passcode</button>
             </div>
           </div>
           <div className="text">
